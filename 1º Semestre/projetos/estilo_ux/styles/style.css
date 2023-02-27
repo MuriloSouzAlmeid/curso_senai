@@ -1,5 +1,5 @@
 /* Imports - Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Quicksand&family=Titillium+Web:ital,wght@0,200;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Quicksand&family=Titillium+Web:ital,wght@0,200;         1,600&display=swap');
 
 /* font-family: 'Kalam', cursive;
 font-family: 'Quicksand', sans-serif;
@@ -8,31 +8,39 @@ font-family: 'Titillium Web', sans-serif; */
 /* o asterísco é um seletor universal no CSS */
 
 
-/* Reset de propriedades de espaçameto entre tags HTML */
+/* Reset de propriedades de espaçameto padrão entre tags HTML */
 * {
     margin: 0;
     padding: 0;
+    /* faz com que as dimensões sejam contadas a partir da borda e não do conteúdo */
     box-sizing: border-box;
 } 
 
 /* Formatação HTML */
 body {
-    /* a font-family altera a fonte em si, dando a primeira opção entre aspas e caso não seja possível estar utilizando tal fonte então o siteirá carregar qualquer outra do sistema operacional do usuário com as características que estão após a vírgula */
+    /* a font-family altera a fonte em si, dando a primeira opção entre aspas e caso não seja possível estar utilizando tal             fonte então o siteirá carregar qualquer outra do sistema operacional do usuário com as características que estão após a             vírgula */
     font-family: 'Quicksand', sans-serif;
     /* define a cor da fonte */
     color: grey;
+    background-color: #EDECED;
 }
+
+/* Centralização do Conteúdo  */
+
+.grid-layout{
+    /* define a lagura que a div irá ocupar na tag pai, no caso a header */
+    width: 85%;
+    /* define a margem que a div terá na tag pai, usado para seu posicionamento na tela (0 pra cima e baixo e auto para             esquerda e direita, sendo assim tudo ficará centralizado) 1º valor pra vertical e 2º pra horizental (sentido relógio) */
+    margin: 0 auto;
+    /* exemplo de shortlne (linha curta) serve para simplificar as propriedades lançando valores padrões para mais de uma           dimensão sem ter que escrever linhas a main   */
+    height: 100%;
+}
+
+/* Heaer */
 
 header{
     background-color: #676767;
-}
-
-header .grid-layout{
-    /* define a lagura que a div irá ocupar na tag pai, no caso a header */
-    width: 85%;
-    /* define a margem que a div terá na tag pai, usado para seu posicionamento na tela (0 pra cima e baixo e auto para esquerda e direita, sendo assim tudo ficará centralizado)  */
-    margin: 0 auto;
-    height: 100px;
+    height: 90px;
 }
 
 header h1{
@@ -53,9 +61,13 @@ header h1 #logo-ux{
 }
 
 header .header-flex{
+    /* diz que a tela é flexível de acordo com o espaço na tela */
     display: flex;
+    /* define a direção dos elementos distribuídos na tela, pode ser row (horizontal) ou column (vertical)  */
     flex-direction: row;
+    /* define como os elementos serão justificados no espaço da tag podendo ser no início, meio ou fim ou ter espaços entre             eles   */
     justify-content: space-between;
+    /* define o alinhamento dos itens na tag, funciona de maneira contrária ao justify-content sendo que se um estiver          alinhando no vertical, outro alinhará no horizontal e vice virsa  */
     align-items: center;
 }
 
@@ -63,7 +75,7 @@ header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 200px;
+    width: 300px;
 }
 
 header nav a{
@@ -71,10 +83,74 @@ header nav a{
     text-decoration: none;
 }
 
+/* Main */
+
+main .main-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.5% auto;
+}
+
+/* Section */
+
+main .conteudo-principal{
+    width: 80%;
+    background-color: white;
+}
+
+/* Imagem Section */
+
+main #lapis{
+    width: 100%;
+}
+
+/* Texto da Section */
+
+main .conteudo-principal article{
+    display: flex;
+    flex-direction: column; 
+    text-align: justify;
+    padding: 2.5%;
+}
+
+/* Aside */
+
+main .barra-lateral{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18%;
+}
+
+main .barra-lateral article{
+    background-color: white;
+}
+
+/* Textos Aside */
+
+main .barra-lateral article h2{
+    text-align: center;
+}
+
+/* Footer */
+
 footer{
+    height: 70px;
     background-color: #676767;
 }
 
+/* Alinhamento Footer */
+
+footer .footer-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Texto Footer */
+
 footer .copyright{
+    font-weight: 500;
     color: white;
 }
