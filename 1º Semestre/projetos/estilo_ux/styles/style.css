@@ -124,6 +124,7 @@ main .barra-lateral{
 }
 
 main .barra-lateral article{
+    padding: 5%;
     background-color: white;
 }
 
