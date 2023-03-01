@@ -1,0 +1,83 @@
+/* Importação De Fontes */
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(../assets/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+
+/* Reset de dimensões */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==== Formatações Gerais HTML ==== */
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* ==== Header Gerais ==== */
+
+header{
+    height: 60px;
+    background-color: #F9003D;
+}
+
+header .header-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* ==== Header Nav ==== */
+
+header nav{
+    width: 45%;
+}
+
+header .nav-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a{
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* ==== Main ==== */
+
+main #banner-destaque{
+    height: 720px;
+    background-color: #340B65;
+}
+
+main .informacoes-banner{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-top: 20%;
+}
+
+main .informacoes-banner .titulo-banner{
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 80px;
+    border-bottom: 1px solid #FFAF00;
+}
+
+main .informacoes-banner .subtitulo-banner{
+    color: #F9003D;
+}
+
+main #sobre{
+    background-color: #340B65;
+}
