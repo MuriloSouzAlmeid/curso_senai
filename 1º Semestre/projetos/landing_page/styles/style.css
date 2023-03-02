@@ -1,17 +1,17 @@
 /* Importação De Fontes */
 @font-face {
     font-family: 'Bebas Neue';
-    src: url(../assets/Bebas_Neue/BebasNeue-Regular.ttf);
+    src: url(../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf);
 }
 
 @font-face {
     font-family: 'Courier New';
-    src: url(../assets/courier-new/courier-new.ttf);
+    src: url(../assets/fonts/courier-new/courier-new.ttf);
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url(../assets/Open_Sans/OpenSans-Light.ttf);
+    src: url(../assets/fonts/Open_Sans/OpenSans-Light.ttf);
 }
 
 /* Reset de dimensões */
@@ -23,11 +23,11 @@
 }
 
 /* ==== Formatações Gerais HTML ==== */
-
 .container{
     width: 80%;
     margin: 0 auto;
     height: 100%;
+    max-width: 1520px;
 }
 
 /* ==== Header Gerais ==== */
@@ -47,7 +47,7 @@ header .header-flex{
 /* ==== Header Nav ==== */
 
 header nav{
-    width: 45%;
+    width: 50%;
 }
 
 header .nav-flex{
@@ -56,11 +56,18 @@ header .nav-flex{
 }
 
 header nav a{
+    border-radius: 10px;
+    padding:10px 20px;
     color: white;
     text-transform: uppercase;
     font-family: 'Bebas Neue', cursive;
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
+}
+
+header nav a:hover{
+    background-color: white;
+    color: #F9003D;
 }
 
 /* ==== Main ==== */
@@ -68,13 +75,13 @@ header nav a{
 /* ==== Banner Destaque ==== */
 
 main #banner-destaque{
-    height: 720px;
-    background-color: #050007;
+    height: 779px;
+    background-image: url(../assets/images/imagem-fundo-banner.png);
 }
 
 main .informacoes-banner{
     width: 45%;
-    padding-top: 226px;
+    padding-top: 250px;
 }
 
 main .banner-flex{
@@ -98,6 +105,10 @@ main .informacoes-banner .subtitulo-banner{
     text-transform: uppercase;
     font-family: 'Courier New', serif;
     color: #F9003D;
+}
+
+main .informacoes-banner #mouse{
+    margin-top: 25px;
 }
 
 /* ==== Seção Sobre ==== */
@@ -150,19 +161,19 @@ main .informacoes-sobre #descricao-sobre{
 
 /* ===== Desafios ==== */
 
-main #desafios{
+main #info{
     height: 200px;
-    background-color: #050007;
+    background-image: url(../assets/images/imagem-fundo-info.png);
 }
 
-main #desafios .desafios-flex{
+main #info .info-flex{
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-main .desafios-flex h3{
+main .info-flex h3{
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 22px;
@@ -171,41 +182,88 @@ main .desafios-flex h3{
     margin-bottom: 5px;
 }
 
-main .desafios-flex .cart-flex{
+main .info-flex .cart-flex{
     display: flex;
     flex-direction: column;
-    width: 289px;
-    height: 100px;
 }
 
-main .desafios-flex .cart-desafios{
+main .info-flex .cart-info{
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 100%;
-    height: 100%;
+    width: 289px;
+    height: 100px;
     border: 2px solid #A259F7;
 }
 
-main .desafios-flex .cart-desafios p{
+main .info-flex .cart-info p{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 600;
     color: #A259F7;
 }
 
-/* ==== Endereço ==== */
-
 /* ==== Footer ==== */
 
-footer{
-    background-color: #F9003D;
-    height: 82px;
+/* ==== Endereço ==== */
+
+footer #endereco{
+    height: 598px;
+    background-image: url(../assets/images/imagem-fundo-endereco.png);
 }
 
-footer .footer-flex{
+footer #endereco .endereco-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     height: 100%;
+    width: 55%;
+    margin: 0 auto;
+}
+
+footer .endereco-flex .titulo-endereco{
+    color: #FFAF00;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 64px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+footer .endereco-flex .info-endereco-flex{
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #010010;
+    border: 2px solid #340B65;
+    height: 204px;
+    width: 100%;
+}
+
+footer .info-endereco-flex .info-endereco{
+    color: #A259F7;
+    padding-left: 66px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: justify;
+}
+
+footer .info-endereco-flex #mapa{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
+
+/* ==== Direitos ==== */
+
+footer .direitos-flex{
+    height: 100%;
+    background-color: #F9003D;
+    height: 90px;
     width: 100%;
 
     display: flex;
@@ -213,7 +271,8 @@ footer .footer-flex{
     align-items: center;
 }
 
-footer .footer-flex p{
+footer .direitos-flex p{
+    text-align: center;
     color: white;
     font-family: 'Open Sans';
     font-size: 18px;
