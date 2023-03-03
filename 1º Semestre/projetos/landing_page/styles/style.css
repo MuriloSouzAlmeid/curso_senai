@@ -30,6 +30,25 @@
     max-width: 1520px;
 }
 
+#voltar-cima{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    background-color: #F9003D;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#voltar-cima img{
+    width: 100%;
+}
+
+#voltar-cima:hover{
+    background-color: #e6073f;
+}
+
 /* ==== Header Gerais ==== */
 
 header{
@@ -47,7 +66,7 @@ header .header-flex{
 /* ==== Header Nav ==== */
 
 header nav{
-    width: 50%;
+    width: 45%;
 }
 
 header .nav-flex{
@@ -75,13 +94,22 @@ header nav a:hover{
 /* ==== Banner Destaque ==== */
 
 main #banner-destaque{
-    height: 779px;
+    width: 100%;
+    height: 765px;
+
+    /* caminho da imagem */
     background-image: url(../assets/images/imagem-fundo-banner.png);
+    /* largura da imagem (cover define  largura 100% e altura automática) */
+    background-size: cover;
+    /* a imagem pode repitir ou não (no caso no-repet é não) */
+    background-repeat: no-repeat;
+    /* que se posicione de baixo pra cima para não cortar a imagem */
+    background-position: bottom;
 }
 
 main .informacoes-banner{
-    width: 45%;
-    padding-top: 250px;
+    width: 44.75%;
+    padding-top: 17%;
 }
 
 main .banner-flex{
@@ -108,7 +136,7 @@ main .informacoes-banner .subtitulo-banner{
 }
 
 main .informacoes-banner #mouse{
-    margin-top: 25px;
+    margin-top: 40px;
 }
 
 /* ==== Seção Sobre ==== */
@@ -162,8 +190,11 @@ main .informacoes-sobre #descricao-sobre{
 /* ===== Desafios ==== */
 
 main #info{
-    height: 200px;
+    width: 100%;
     background-image: url(../assets/images/imagem-fundo-info.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 main #info .info-flex{
@@ -185,6 +216,7 @@ main .info-flex h3{
 main .info-flex .cart-flex{
     display: flex;
     flex-direction: column;
+    margin: 5% auto;
 }
 
 main .info-flex .cart-info{
@@ -199,7 +231,7 @@ main .info-flex .cart-info{
 
 main .info-flex .cart-info p{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 600;
     color: #A259F7;
 }
@@ -209,8 +241,18 @@ main .info-flex .cart-info p{
 /* ==== Endereço ==== */
 
 footer #endereco{
-    height: 598px;
+    width: 100%;
+    height: 560px;
     background-image: url(../assets/images/imagem-fundo-endereco.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+footer .footer-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer #endereco .endereco-flex{
@@ -219,8 +261,7 @@ footer #endereco .endereco-flex{
     justify-content: center;
 
     height: 100%;
-    width: 55%;
-    margin: 0 auto;
+    width: 66%;
 }
 
 footer .endereco-flex .titulo-endereco{
@@ -246,7 +287,7 @@ footer .endereco-flex .info-endereco-flex{
 
 footer .info-endereco-flex .info-endereco{
     color: #A259F7;
-    padding-left: 66px;
+    padding-left: 50px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     text-align: justify;
