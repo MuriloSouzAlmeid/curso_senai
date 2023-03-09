@@ -14,6 +14,11 @@
     src: url(../assets/fonts/Open_Sans/OpenSans-Light.ttf);
 }
 
+@font-face {
+    font-family: 'ABeeZee';
+    src: url(../assets/fonts/ABeeZee/ABeeZee-Regular.ttf);
+}
+
 /* Reset de dimensões */
 
 *{
@@ -332,17 +337,27 @@ footer .direitos-flex p{
 /* Mobile Screen */
 
 @media screen and (max-width: 767px) {
+
+    /* Formatações Gerais Para Mobile */
+
+    .container{
+        width: 90%;
+    }
+
+    /* Header Mobile */
+
     header #menu-navegacao {
+        display: none;
         position: fixed;
         top: 59px;
-        right: 0;
-        width: 50vw;
-        height: 100vh;
+        right: 0px;
+        width: 40vw;
+        height: 60vh;
         max-width: 360px;
 
         background-color: #F9003D;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-around;
         align-items: center;
     }
 
@@ -350,8 +365,7 @@ footer .direitos-flex p{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        width: 150px;
-        margin: 50px auto;
+        width: 120px;
         border-right: 2px solid white;
         border-radius: 0;
         padding: 5px 20px;
@@ -362,9 +376,94 @@ footer .direitos-flex p{
         display: block;
     }
 
-    main{
+    /* Banner Destaque Mobile */
+
+    main #banner-destaque{
+        background-position: center right;
+        height: 500px;
+    }
+
+    main #banner-destaque .informacoes-banner{
+        padding-top: 20%;
+        width: 100%;
+    }
+
+    main .informacoes-banner .titulo-banner{
+        color: white;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 40px;
+        font-weight: 400;
+        border-bottom: none;   
+    }
+
+    main .informacoes-banner .subtitulo-banner{
+        width: 100%;
+        font-size: 53px;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: 'ABeeZee', serif;
+        color: #F9003D;
+    }
+
+    main .informacoes-banner #mouse{
         display: none;
     }
+
+    /* Seção Sobre Mobile */
+
+    main #sobre{
+        width: 100%;
+        height: 1110px;
+    }
+    
+    main .titulo-sobre{
+        padding-top: 45px;
+        color: #F9003D;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 35px;
+        font-weight: 400;
+    }
+    
+    main .sobre-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    main .sobre-flex #img-sobre{
+        width: 100%;
+    }
+    
+    main .informacoes-sobre{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main .informacoes-sobre .subtitulo-sobre{
+        margin: 25px 0;
+        color: #FFAF00;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 30px;
+        font-weight: 400;
+    }
+    
+    main .informacoes-sobre #participantes-texto{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+    }
+    
+    main .informacoes-sobre #descricao-sobre{
+        text-align: justify;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+    }
+
+    /* Footer Mobile */
 
     footer{
         display: none;
