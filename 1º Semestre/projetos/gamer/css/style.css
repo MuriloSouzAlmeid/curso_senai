@@ -1,0 +1,77 @@
+/* Resert de Dimensões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Formatações Gerais HTML */
+
+body{
+    background-color: #1B1426;
+}
+
+.container{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header{
+    color: white;
+}
+
+header .header-top{
+    height: 50px;
+    border-bottom: 1px solid #F9AA01;
+}
+
+header .header-top .header-top-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-top .contatos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 400px;
+}
+
+header .header-top .contatos p{
+    padding-left: 20px;
+}
+
+header .contatos .telefone{
+    display: flex;
+    align-items: center;
+}
+
+header .contatos .email{
+    align-items: center;
+    display: flex;
+}
+
+header .header-top .redes-sociais{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+header .header-bottom{
+    height: 90px;
+}
+
+header .header-bottom .header-bottom-flex{
+    display: flex;
+}
+
+header .header-bottom .menu a{
+    text-decoration: none;
+    color: white;
+}
