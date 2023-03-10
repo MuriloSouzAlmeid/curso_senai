@@ -7,10 +7,6 @@
 
 /* Formatações Gerais HTML */
 
-body{
-    background-color: #1B1426;
-}
-
 .container{
     width: 90%;
     height: 100%;
@@ -20,6 +16,7 @@ body{
 /* Header */
 
 header{
+    background-color: #1B1426;
     color: white;
 }
 
@@ -69,9 +66,28 @@ header .header-bottom{
 
 header .header-bottom .header-bottom-flex{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-bottom .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+    width: 450px;
 }
 
 header .header-bottom .menu a{
     text-decoration: none;
     color: white;
+}
+
+header .header-bottom .menu-perfil{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 150px;
 }

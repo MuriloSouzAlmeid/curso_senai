@@ -1,0 +1,64 @@
+/* Imports de fonts */
+
+/* Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mobile First */
+
+body {
+    color: white;
+}
+
+.container{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    background-color: #1B1426;
+}
+
+header .header-top{
+    display: none;
+}
+
+header .header-bottom{
+    height: 60px;
+}
+
+header .header-bottom .menu{
+    background-color: gray;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    height: 100vh;
+    width: 70vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header-bottom .menu_usuario{
+    display: none;
+}
+
+header .header-bottom .header-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header .header-bottom .logo{
+    width: 95px;
+    height: 26px;
+}
