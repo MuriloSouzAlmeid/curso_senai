@@ -7,6 +7,10 @@
 
 /* Formatações Gerais HTML */
 
+body{
+    background-color: #1B1426;
+}
+
 .container{
     width: 90%;
     height: 100%;
@@ -21,6 +25,7 @@ header{
 }
 
 header .header-top{
+    display: none;
     height: 50px;
     border-bottom: 1px solid #F9AA01;
 }
@@ -31,26 +36,40 @@ header .header-top .header-top-flex{
     align-items: center;
 }
 
-header .header-top .contatos{
+header .contatos{
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
 
-    width: 400px;
+     width: 400px;  */
 }
 
-header .header-top .contatos p{
+header .contatos p{
     padding-left: 20px;
 }
 
 header .contatos .telefone{
     display: flex;
+    justify-content: center;
     align-items: center;
+
+    border-bottom: 2px solid #F9AA01;
+    padding: 32px 0;
+    width: 100%;
 }
 
 header .contatos .email{
-    align-items: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 32px 0;
+    width: 100%;
 }
 
 header .header-top .redes-sociais{
@@ -61,7 +80,7 @@ header .header-top .redes-sociais{
 }
 
 header .header-bottom{
-    height: 90px;
+    height: 60px;
 }
 
 header .header-bottom .header-bottom-flex{
@@ -71,23 +90,134 @@ header .header-bottom .header-bottom-flex{
 }
 
 header .header-bottom .menu{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 77vw;
+    height: 100vh;
+    
+    background-color: grey;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 
-    height: 100%;
-    width: 450px;
+    display: none;
+
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
 }
 
-header .header-bottom .menu a{
-    text-decoration: none;
+header .header-bottom #logo_gamer{
+    width: 97px;
+    height: 25px;
+}
+
+header .menu .menu-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    border-bottom: 2px solid #F9AA01;
+}
+
+header .menu .menu-flex p{
     color: white;
+    /* margin-bottom: 1px solid #F9AA01; */
+}
+
+header .menu .menu-flex a{
+    padding: 32px 0;
+    text-decoration: none;
+}
+
+header .menu .redes-sociais{
+    position: absolute;
+    top: 83vh;
+
+    display: flex;
+    justify-content: space-between;
+    width: 36vw;
 }
 
 header .header-bottom .menu-perfil{
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 20vw;
+    height: 28vh;
+
+    background-color: gray;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+}
+
+header .menu-perfil .menu-perfil-flex{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
-    width: 150px;
+}
+
+main #banner-destaque{
+    background-image: url(../assets/images/banner_mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 610px;
+}
+
+main #banner-destaque .banner-flex{
+    display: flex;
+    justify-content: center;
+}
+
+main #banner-destaque .banner-flex .info-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 84%;
+    margin: 4% 0 auto;
+}
+
+main #banner-destaque .banner-flex .info-banner .titulo-banner{
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    text-shadow: 0px 0px 7px #FD4255;
+}
+
+main #banner-destaque .banner-flex .info-banner .botao-sobre{
+    font-size: 24px;
+    font-weight: 900;
+    padding: 7px 55px;
+    background-color: #F9AA01;
+    border-radius: 8px;
+}
+
+main #banner-destaque .banner-flex .info-banner .botao-sobre a{
+    text-decoration: none; 
+    color: black;
+}
+
+main #principais-produtos{
+    height: 588px;
+}
+
+main #principais-produtos .principais-carts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 90%;
+    margin: auto 0;
 }

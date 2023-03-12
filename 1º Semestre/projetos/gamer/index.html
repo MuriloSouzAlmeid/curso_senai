@@ -36,24 +36,102 @@
             </div>
                 <div class="header-bottom">
                     <div class="container header-bottom-flex">
+
+                        <!-- Ícone de menu hamburger - visível apenas no mobile -->
                         <figure>
-                            <img src="assets/images/logotipo_gamer.png" alt="Imagem logotipo da empresa Gamer">
+                            <img src="assets/icons/menu_hamburger.svg" alt="Ícone de menu hamburger utilizado para abrir o menu de navbar">
+                        </figure>
+
+                        <figure>
+                            <img id="logo_gamer" src="assets/images/logotipo_gamer.png" alt="Imagem logotipo da empresa Gamer">
                         </figure>
                         <nav class="menu">
-                            <a href=""><span>Início</span></a>
-                            <a href="">Jogadores</a>
-                            <a href="">Equipes</a>
-                            <a href="">Notícias</a>
+                            <div class="menu-flex">
+                                <a href="">
+                                    <span><p>Início</p></span>
+                                </a>
+                            </div>
+                            <div class="menu-flex">
+                                <a href="">
+                                    <p>Jogadores</p>
+                                </a>
+                            </div>
+                            <div class="menu-flex">
+                                <a href="">
+                                    <p>Equipes</p>
+                                </a>
+                            </div>
+                            <div class="menu-flex">
+                                <a href="">
+                                    <p>Notícias</p>
+                                </a>
+                            </div>
+
+                            <!-- Informações Contatos Visível apenas no mobile -->
+                                <div class="contatos">
+                                    <div class="telefone">
+                                        <img src="assets/icons/icone_telefone.svg" alt="ícone de um telefone utilizado para indicar que se trata de um meio de contato por telefone">
+                                        <p>(00) 0000-0000</p>
+                                    </div>
+                                    <div class="email">
+                                        <img src="assets/icons/icone_email.svg" alt="ícone de uma carta de correio utilizado para indicar que se trata de um meio de contato por email">
+                                        <p>example@email.com</p>
+                                    </div>
+                                </div>
+
+                            <!-- Informações de Mídias Sociais visível apenas no mobile -->
+                            <div class="redes-sociais">
+                                <a href="">
+                                    <img src="assets/icons/icone_facebook.svg" alt="link do perfil do Facebook de empresa">
+                                </a>
+                                <a href="">
+                                    <img src="assets/icons/icone_linkedin.svg" alt="link do perfil do Linkedin de empresa">
+                                </a>
+                                <a href="">
+                                    <img src="assets/icons/icone_instagram.svg" alt="link do perfil do Instagram de empresa">
+                                </a>
+                            </div>
                         </nav>
+
+                        <!-- Ícone de menu três pontinhos - visível apenas no mobile -->
+                        <figure>
+                            <img src="assets/icons/menu_usuario.svg" alt="Ícone de menu três pontinhos utilizado para abrir o menu de usuário">
+                        </figure>
+
                         <div class="menu-perfil">
-                            <img src="assets/icons/icone_procurar.svg" alt="Ícone de formulário de pesquisa">
-                            <img src="assets/icons/icone_cart.svg" alt="Ícone de carrinho de compras">
-                            <img src="assets/icons/icone_perfil.svg" alt="Ícone de seção de perfil">
+                            <div class="menu-perfil-flex">
+                                <img src="assets/icons/icone_procurar.svg" alt="Ícone de formulário de pesquisa">
+                                <img src="assets/icons/icone_cart.svg" alt="Ícone de carrinho de compras">
+                                <img src="assets/icons/icone_perfil.svg" alt="Ícone de seção de perfil">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <h1>Liga Gamers</h1>
+        <main>
+            <section id="banner-destaque">
+                <div class="container banner-flex">
+                    <div class="info-banner">
+                        <h1 class="titulo-banner">Liga Gamers</h1>
+                        <p class="botao-sobre">
+                            <a href="">Sobre</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="principais-produtos">
+                <div class="container ">
+                    <div class="principais-carts">
+                        <figure class="pupolar">
+                            <img src="assets/images/imagem_popular.png" alt="Imagem promocional do jogo FIFA 23 com o Mbappe na capa">
+                        </figure>
+                        <figure class="novidade">
+                            <img src="assets/images/imagem_novidade.png" alt="Imagem promocional do jogo Counter Strike com dois soldados de serviços militares armados na capa">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
