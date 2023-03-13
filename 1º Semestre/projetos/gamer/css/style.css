@@ -1,3 +1,28 @@
+/* Pseudoelementos define propriedades específicas à alguns elementos dentro de uma mesma div como um span dentro do html mas mais prático e pelo css Ex: a:hover*/
+
+/* Seletor especial para os filhos, irmãos diretos de uma tag pegando apenas aqueles que estão em hierarquia direta à tag sem pegar seu 3 o 4 Ex: X > y (filho direto) ou X ~ Y (Irmão direto)*/
+
+/* Importação de Fontes */
+@font-face {
+    font-family: 'Titillium Web Bold';
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Titillium Web Black';
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../assets/fonts/Inter/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'QuickSand';
+    src: url(../assets/fonts/Quicksand/Quicksand-Regular.ttf);
+}
+
 /* Resert de Dimensões */
 * {
     margin: 0;
@@ -5,11 +30,9 @@
     box-sizing: border-box;
 }
 
-/* Formatações Gerais HTML */
+/* ================================ Mobile First =============================== */
 
-body{
-    background-color: #1B1426;
-}
+/* Formatações Gerais HTML */
 
 .container{
     width: 90%;
@@ -17,7 +40,11 @@ body{
     margin: 0 auto;
 }
 
-/* Header */
+.ativo{
+    color: #F9AA01;
+}
+
+/* Configurações Gerais do Header */
 
 header{
     background-color: #1B1426;
@@ -72,12 +99,16 @@ header .contatos .email{
     width: 100%;
 }
 
+/* Configuração da seção de cima do Header */
+
 header .header-top .redes-sociais{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 150px;
 }
+
+/* Configurando a seção de baixo do Header */
 
 header .header-bottom{
     height: 60px;
@@ -89,20 +120,32 @@ header .header-bottom .header-bottom-flex{
     align-items: center;
 }
 
+/* Configurando Menu de Navegação (Menu Hamburger) */
+
 header .header-bottom .menu{
     position: fixed;
     top: 60px;
     left: 0;
-    width: 77vw;
-    height: 100vh;
+    width: 80vw;
+
+    /* Desconta o valor do header na altura da nav para se ajustar totalmente a tela */
+    height: calc(100vh - 60px);
     
-    background-color: grey;
+
+    /* Faz um efeito gradiente em linear passando os valores da direção, e as cores presentes no gradiente */
+    background: linear-gradient(168.74deg, rgba(27, 20, 38, 0.7) 0%, rgba(27, 20, 38, 0.4) 100%);
+    
+    /* Cria o efeito de borrado do glassmorsphims passando qual o tipo de filtro do background e quanto de parâmetro em valor */
+    backdrop-filter: blur(45px);
+
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    display: none;
+    /* display: none; */
 
+
+    /* Configuração do computador */
     /* display: flex;
     align-items: center;
     justify-content: space-between; */
@@ -113,6 +156,12 @@ header .header-bottom #logo_gamer{
     height: 25px;
 }
 
+header .menu p{
+    color: white;
+    font-family: 'Inter';
+    font-size: 15px;
+}
+
 header .menu .menu-flex{
     display: flex;
     justify-content: center;
@@ -120,11 +169,6 @@ header .menu .menu-flex{
 
     width: 100%;
     border-bottom: 2px solid #F9AA01;
-}
-
-header .menu .menu-flex p{
-    color: white;
-    /* margin-bottom: 1px solid #F9AA01; */
 }
 
 header .menu .menu-flex a{
@@ -137,9 +181,15 @@ header .menu .redes-sociais{
     top: 83vh;
 
     display: flex;
-    justify-content: space-between;
-    width: 36vw;
+    justify-content: center;
+
+    /* Propriedade Flex: gap, funciona como uma maneira de definir valores para espaçamento entre os elementos de uma tag que tenha display flex. A propriedade funciona ao declara-la e depois informar o valor depois Ex: gap: 20px;  */
+    gap: 30px;
+
+    width: 100%;
 }
+
+/* Configurando Menu Perfil (Três Pontinhos) */
 
 header .header-bottom .menu-perfil{
     position: fixed;
@@ -163,6 +213,12 @@ header .menu-perfil .menu-perfil-flex{
     height: 20vh;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Main */
+
+main{
+    display: none;
 }
 
 main #banner-destaque{
@@ -190,15 +246,15 @@ main #banner-destaque .banner-flex .info-banner{
 
 main #banner-destaque .banner-flex .info-banner .titulo-banner{
     color: white;
+    font-family: 'Titillium Web Black';
     font-size: 40px;
-    font-weight: 900;
     text-shadow: 0px 0px 7px #FD4255;
 }
 
 main #banner-destaque .banner-flex .info-banner .botao-sobre{
     font-size: 24px;
-    font-weight: 900;
-    padding: 7px 55px;
+    font-family: 'Titillium Web Bold';
+    padding: 3px 55px;
     background-color: #F9AA01;
     border-radius: 8px;
 }
@@ -209,6 +265,7 @@ main #banner-destaque .banner-flex .info-banner .botao-sobre a{
 }
 
 main #principais-produtos{
+    background-color: #1B1426;
     height: 588px;
 }
 
